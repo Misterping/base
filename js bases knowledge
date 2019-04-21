@@ -1,0 +1,238 @@
+运算符的学习：
++ - * /
+ 数字和字符串相加为字符串 结果为连接
+ 数组相加也为字符串 
+对象相加无意义
+函数不能相加
+0代表false 
+1 代表true
+!表示的是取反  返回布尔型的结果
+
+1==‘1’  结果是true
+[]==[] 结果为false
+=== 表示值和类型都要一样才能相等
+== 只需要值相等就行 没有严格的要求
+
+
+函数的参数 function(){  } 【arguments为函数的参数】
+
+
+值类型和引用类型：
+string 是值类型  obj和array是引用类型 两者的区别是不一样的
+NaN是number 类型
+null是obj类型
+parseInt("fdjjhj")此时就是NaN类型
+
+
+DOM 表示文档对象模型 document object model
+
+函数称之为方法 里面包含了值
+
+选择器的获取：
+document.getElementById("DIV")
+........t.getElementsByClassName('item')[0]
+document.getElementsByTagName('div')[0]
+
+
+标签的属性：
+class：className
+id:id
+href:href
+
+
+通用获取标签属性的方法：getAttribute('属性键') 这样可以获得属性值；
+设置属性的方法:setAttribute(‘class’，‘value’)
+
+
+监听器事件:返回参数event
+鼠标事件：[mousedown、mouseup 、click、 mouseover(鼠标覆盖上去) 、 mouseleaver、document.mousemove]
+键盘事件：document.addEventListener()   [keydown、keyup、]
+页面事件：
+表单事件:【focus（聚焦）  blur(失去焦点) input】
+
+注意：JS是逐行执行的 一定注意先后顺序 任何变量需要先定义才能被执行
+双向数据流数据不同步。
+
+重新复习：
+css中:
+1.选择器
+2.代码结构
+3.属性名
+4.属性值
+
+
+js中：
+1.变量
+2.关键字
+3.代码结构
+4.语法  数组[] 对象
+5.驼峰式命名的风格
+7.this 的了解
+
+
+window对象完全解析：
+全局变量为Window的属性  相当于给Window添加属性
+this指向一个对象在 在一个函数中  那个要要用它就指向哪个对象
+
+window.innerHeight和window.innerWidth
+
+window下的对象：window.location、window.history、window.navigator(导航者:做浏览器适配、针对不同语言用户适配 最常用的属性是naviragot.userAgent不同类型手机适配)
+
+window.load=function(){ 当页面全部加载完之后 再来处理此处的内容}
+ 
+window下的方法：parseInt() 和parseFloat()
+window下的事件：window.addEventListener(‘resize’,function(){})
+
+console.warn()和console.error()和console.clear()清除方法 修改调试台（console.log('%c不要乱点','color:red,font-size:20px;')）
+
+检测程序运行时间的：console.time(‘’) 与之对应的console.timeEnd('text-for')
+
+弹窗：警告alert() 和确认信息confirm()
+输入信息的弹窗：prompt()
+
+ajax知识学习：
+var xhr=new XMLHttpRequest()
+xhr.open('get\post','URL',false\true)
+var tpl='字符串模板' 
+xhr.send()
+xhr.onreadystatechenge=function(){
+if(xhr.status==200 && xhr.readyState==4)
+{
+var result=xhr.response
+var str='空字符串'
+result.forEach(function(){
+str+=tpl模板.replace('$%----%$'，‘要替换的’)
+})
+document.body.innerHTML=str
+}
+}
+
+
+普及：其中innerHTML是将字符串转换为html
+而innerText是直接就是字符串
+
+
+slice()函数的用法：截取数据 比如：var str=[1,2,3,4]
+str.slice(0,3)  //结果[1,2,3]
+
+eval() 函数的用法：可以运算字符串 比如：eval("1+21")  //结果:22
+函数可以作为返回值 函数可以作为参数 比如：var f=function()
+{  return function(){console.log("212dsd") } ;   f()();//运行结果为："212dsd"  
+
+构造器的用法:大写的字母开头的
+
+ajax的Jquary的学习：
+$.ajax({
+type:"get",
+async  :true,
+data:{},
+url: ""，
+data:{} ,
+success:function(result){
+console.log(result)
+}
+})
+
+
+localStorage的学习：localStorage只能存储字符串和数字类型 （不能存储对象类型）
+localStorage.clean() 清除本地存储;
+localStorage.setItem(“noteList”,noteList);存储数据
+localStorage.getItem();或许本地存储
+JSON.parse() 转化为对象
+JSON.stringfy()转化为字符串
+
+
+
+
+获取时间的方法：
+var d=new Date(） 获取时间点
+d.getDate()获取的是几号
+d.getDay()获取的是星期几
+d.getFullYear(）获取的是年
+d.getMonth(）获取的是月份
+d.getHouse(）获取的是时
+d.getMintes()获取的是分
+d.getSeconds（）获取的是秒
+d.getTime(）获取的是：从1970年到现在的时间（毫秒级别的）
+
+
+切片的方法：
+array.slice(start,end[不包括在内])
+str.split(）字符串分割【返回的是数组的形式】
+ array.join("")，用指定分隔符分割数组并转换为字符串；
+JS中的所有对象都具有toString方法，它把一个变量隐式转换为字符串
+
+Number类型的对象的toString()方法比较特殊，有默认模式和基模式两种
+
+
+
+
+1.类型运算符操作：delete
+比如：var arr=[1,2,3,4];
+delete arr[1] //这时会删除arr中的1
+
+2.正则表达式RegExp
+用法： var str=new RegExp("dhsjdhj")
+zhe shi yi ge zhengze biao da shi str
+
+
+js继承的学习:
+任何类型都是对象类型演变而来
+
+任何类型都有自己特殊的属性
+--proto--表示原型
+数组构造器 -》一个数组是他的实列构造器prototype的属性对象所携带的
+arr.prototype.forEach.call(d1,function(item){console.log(item)})
+
+  
+JSON格式：全称：javascript对象表示法   以javascript的对象格式表示
+ JSON以js对象表示的字符串
+
+
+API的学习：Application Programming Interface,应用程序编程接口
+
+
+排序：arr.sort(fuction(a,b){return a-b})按照从小到大的排序 
+arr.sort(fuction(a,b){return b-a})按照从大到小的排序 
+
+arr.shift(）方法是把数组的第0项删除
+
+卸载淘宝镜像的方法： npm uninstall cnpm -g  然后cnpm -v 查看版本
+
+dom事件的三个阶段:捕获阶段   目标阶段    冒泡阶段
+
+w3c的标准协议是：结构 表现  行为
+
+
+bootshrap是属于css框架，属于UI库 意义在于：学习优雅的命名规范,学习什么是可复用的WEB组件 .提高开发效率
+
+
+复杂的flex布局 响应式开发 和移动端基础知识
+
+
+
+nodejs是一门后台语言 ,非阻塞I/O处理   采用时间驱动的异步编程
+npm是nodejs里面的包管理器
+
+判断一个数值或者是一个函数是不是NaN的方法是：isNaN(data)         结果为布尔型
+
+
+
+ES6的学习：
+在定义变量上有了巨大的改变
+1.  let 会被代码块所束缚作用域  然而var 为全局变量
+2. const  定义常量
+3.箭头函数:add=()=>{  }  箭头函数的特点：1，如果只有一个参数 可以省略括号  2.如果函数只有一行返回值 可以省略括号和return 
+    注意：当没有声明数据类型时变量为全局变量
+总结：箭头函数保留调用其对象的this  意思就是谁调用它 this就指向谁  
+
+
+
+
+
+
+
+
+
+
+
