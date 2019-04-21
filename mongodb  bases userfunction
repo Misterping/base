@@ -1,0 +1,36 @@
+1.首先连接数据库 使用命令为：mongo (连接到服务器上)
+2.查看所有的库：show dbs
+3.切换 ，每个库或者是表用 use 库名（表名）
+
+库的操作：
+添加库：use 库名
+删除库：库名.dropDatabase()
+注意：库里面的表插入数据成功库也就创建成功了；
+
+表的操作：
+切换表   use 表名
+展示全部的表用 show tables 或者是show collections
+删除表操作：db.表名.drop()
+
+数据的操作:
+4.插入数据用 db.表名.insert()
+5.删除数据用 db.表名.remove({条件})
+6.修改数据：db.表名.updata({查找条件},{$set{更改条件}},false,false)
+7.查找数据用:db.表名.find({条件})
+             db.表名.find({})这里可以查找到所有
+
+注意修改数据的两个参数：
+upsert:默认是false  不插入数据
+multi:默认是false  只更新查找到的第一条数据
+
+
+
+3.2版本以上的操作有：
+批量添加：db.表名.insertMany({},{},{})
+批量删除：db.表名.deleteMany({})
+
+修改数据的操作：db.表名.update({},{$inc:{键值数据增加或减少}})
+                db.表名.update({},{$unset:{删除某个属性}})
+                db.表名.update({},{$push:{添加数组}})
+                db.表名.update({},{$pop:{phonenumber:1 删除电话号码第一个记录}})
+
