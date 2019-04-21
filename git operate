@@ -1,0 +1,81 @@
+ 一、 git 的操作命令：本地文件托管工具的操作
+(一)对本地仓库的整理：
+
+ 1、【初始化命令：git init  初始化仓库】
+ 2、【查看状态：  git status】
+ 3、【将文件添加到本地暂存区： git add 文件名  2. [ git add .  表示添加多个文件]】
+ 4、【提交到本地仓库： git commit -m  '加以说明' 】
+ 5、【查看提交的历史记录：git log】
+ 6、【版本回退：git reset --hard HEAD^】
+
+（二）对本地分支的管理：
+ 1、【创建本地分支： git branch 分支名 】
+ 2、【查看本地分支情况(包括远端和本地)： git branch -a [-r 查看远程分支情况]】
+ 3、【进入本地分支或文件： git checkout 文件名 】
+ 4、【删除本地分支： git branch 文件名 -d 】
+ 5、【分支的合并 git merge 合并的文件名 】
+
+（三）对远端分支的管理：
+1、【在远端上创建一个分支：git push --set-upstream origin 分支名】
+2、【删除远端分支： git push origin --delete 分支名】
+3、【删除远端文件:git rm -r -n --cached 文件名 {-n表示预览} 】其实就是先删除本地文件再推送到远程端】
+
+（四）对远端仓库的管理：
+1、【远端仓库路径查询：git remote -v】
+2、【添加远程仓库：git remote add origin 链接名】
+
+（五）远端和本地的操作:
+1、【将本地分支推送到远端:git push {首次操作：git remote add origin 链接名，然后：git push -u  origin 分支名} 此操纵是将远端‘分支’拉取并合并到   本地 】
+2、【从远端分支拉取到本地： 使用命令 git pull 】
+3、【从远端克隆到本地：git clone 链接名     {此操作是将完整版本‘库’克隆到本地 }】
+4、【从远端拉取指定分支到本地没有的分支数据:   git pull origin <远程分支名>:<本地分支名>】
+
+（六）对本地git的管理：
+1、【删除本地git ：  rm -rf .git】
+
+
+
+
+注意：git push <远程主机名> <本地分支名>:<远程分支名>
+PS:注意，分支推送顺序的写法是<来源地>:<目的地>，所以git pull是<远程分支>:<本地分支>，而git push是<本地分支>:<远程分支>。
+
+
+
+
+
+
+ 二、 项目托管平台的使用
+ 1.先注册
+ 2.操作：
+  点击new project -> 创建仓库creating reponsitory
+  由【本地克隆到托管平台的操作】：
+  本地新建一个文件夹-> 在开发软件终端输入命令 git init 初始化仓库
+  然后输入 git remote add origin 复制网站名  -> git push -u origin 分支名
+  注意：这是第一次创建关系连接以后就可以这样操作：git push 
+
+  3.在托管平台上操作： 点击 create new File -> 填写文件名称->编写代码 或内容->在commit new file 中写：add  文件名 ->
+  点击按键就可以看到文件了
+
+
+
+注意：从远端克隆数据到本地的步骤：
+新建文件夹-》克隆git clone <链接名>
+
+＃初始化本地仓库
+git init
+＃将本地内容添加至git索引中
+git add .
+＃将索引添加至本地仓库中
+git commit -m "first commit"
+#添加远程仓库路径
+git remote add origin https://github.com/smileLuckBoy/maven.git
+＃将本地内容push至远程仓库中
+git push -u origin master
+
+
+
+
+
+
+
+
