@@ -1,0 +1,109 @@
+react调试工具的安装步骤（百度网盘视屏react 1.2的最后有讲解）
+1、首先先下载安装包（用于调试浏览器的）：
+a.新建一个文件夹，在此文件夹的终端命令中输入：cnpm install create-react-app -g 安装完成
+b.创建编辑文件 通过命令：create-react-app demo1
+2、到谷歌浏览器地址栏中输入chrome entensions扩展界面
+3、将下载的安装包拉到扩展中安装
+4、安装完成,可以编写APP了。
+
+
+组件的引用视屏2-3了解；
+
+react app的启动方式是：
+ (1)cd 目标文件
+(2)npm start
+
+学习react:
+1.模板为：
+import React,{Component} from 'react'
+
+class App extends Component{
+constructor(){
+super();
+
+render(){
+return ()
+
+}
+2.组件的引入方式：
+引入：
+import Button from './Button'
+引出：
+exports default Button ；
+
+3.状态的写法：
+state={
+like:"sdsds"
+}
+this.state({
+like:!thi.like ,
+})
+
+4.添加元素的方法：
+const demo=React.createElement({
+'div'
+{className:'dsdsds'} ,
+'323232'
+})
+
+5.JSX的属性标签说明：
+for     htmlFor    说明：在JS中循环关键字
+class    className  说明：表示class
+style   用js对象
+
+6.foreach()函数没有返回值，但是map函数有返回值，都是遍历的意思
+join()函数用于将数组中的元素转化为字符串，用法是：arr.join()
+
+7.组件的三个属性：
+this.state
+this.context
+this.props
+
+7.获取原生的标签：e.target
+获取value:e.target.value
+获取原生的事件：e.nativeEvent
+
+已经看到视屏2-2了
+
+
+node安装教程：
+1、首先到node的官网下载windows系统(.msi） 64位；
+2、无限点击安装
+3、安装完成之后打win+r输入node 如果能执行js代码说明安装成功
+
+首先react的开发（入门）
+
+其次react学习(适合中级开发)：
+一．Vsc安装react学习的插件：
+1.npm intellistense 有自动补全的功能。
+2.path intellistense 有自动补全文件名的功能。
+3.prettier- code formatter 有代码格式化的功能。
+4.reactjs code snippets  提供react相关的代码片段或模板
+二．React 就是一个javaScrip 库
+1.React 的基础知识
+2.jsx知识
+3.preops（组件对内的接口）和state（组件对外的接口） 知识
+4.组件的生命周期
+5.列表和keys
+6.事件处理
+7.表单
+三．实战案列
+   1.项目结构创建
+{
+1.create-react-app (npm 5.2+) 创建项目文件。
+2.通过插件可以补全组件结构比如敲代码rcc 就可以补全一个组件结构。
+3.Bem的命名方式（BEM的意思就是块（block）、元素（element）、修饰符（modifier））。
+4.组件的分层化使用用到的属性为 this.props.data 比如{pirce ,product ,name}=this.props.data。
+5.执行代码要用大括号{ }才会被执行。
+6.Ejs6的map(key,value,arr)属性学习比如。Key表示顺序（0，1，2，3），value表示的是值,arr
+表示整个数组
+
+})
+}
+ 2.页面组件划分
+   3.页面组件实现
+4.获取服务器数据
+
+
+
+
